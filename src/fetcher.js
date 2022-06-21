@@ -5,7 +5,7 @@ axios.defaults.baseURL =
 
 const fetcher = async (method, url, ...rest) => {
   const res = await axios[method](url, ...rest);
-
+  console.log('data', res);
   return res.data;
 };
 

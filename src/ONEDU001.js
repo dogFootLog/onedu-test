@@ -37,9 +37,10 @@ const ONEDU001 = () => {
     setRecentSearched('');
   };
 
+  // postman json 응답 형식 확인
   const getTotalApi = async () => {
     const res = await fetcher('get', '/sakura');
-    console.log(typeof res, res);
+    console.log(res);
     setClassList(res.list);
     setShowList(res.list);
   };
