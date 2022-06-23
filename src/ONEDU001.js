@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import fetcher from './fetcher';
+import './ONEDU001.css';
 
 const ONEDU001 = () => {
   const [value, setValue] = useState('');
@@ -79,11 +80,15 @@ const ONEDU001 = () => {
           </>
         )}
       </div>
-      <div>
+      <div className="container">
         {showList &&
           showList.length > 0 &&
           showList.map((item, idx) => (
-            <div key={idx} onClick={(e) => handleDetail(e, item.id)}>
+            <div
+              className="item"
+              key={idx}
+              onClick={(e) => handleDetail(e, item.id)}
+            >
               <img alt="thumbnail" src={item.imageFile} />
               <p>{item.name}</p>
             </div>
