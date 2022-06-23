@@ -1,5 +1,5 @@
-import _, { get } from 'lodash';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import fetcher from './fetcher';
 
 const ONEDU001 = () => {
@@ -45,11 +45,22 @@ const ONEDU001 = () => {
     setShowList(res.list);
   };
 
+  const navigate = useNavigate();
+
+  const getDetailApi = async (id) => {
+    const res = await fetcher('get', `/sakura/${id}`);
+    console.log(typeof res, res);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    navigate('/ONEDU002', { state: res });
+  };
+
   useEffect(() => {
     getTotalApi();
   }, []);
 
-  //useEffect(() => console.log(showList), [showList]);
+  const handleDetail = (e, id) => {
+    getDetailApi(id);
+  };
 
   return (
     <div>
@@ -72,10 +83,10 @@ const ONEDU001 = () => {
         {showList &&
           showList.length > 0 &&
           showList.map((item, idx) => (
-            <React.Fragment key={idx}>
+            <div key={idx} onClick={(e) => handleDetail(e, item.id)}>
               <img alt="thumbnail" src={item.imageFile} />
               <p>{item.name}</p>
-            </React.Fragment>
+            </div>
           ))}
       </div>
     </div>

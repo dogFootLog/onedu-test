@@ -1,11 +1,13 @@
-import logo from './logo.svg';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
 import './App.css';
-import ONEDU001 from './ONEDU001';
 
 function App() {
   return (
     <div className="App">
-      <ONEDU001 />
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     </div>
   );
 }
