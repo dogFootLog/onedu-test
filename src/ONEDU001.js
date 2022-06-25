@@ -64,7 +64,7 @@ const ONEDU001 = () => {
   };
 
   return (
-    <div>
+    <div className="main">
       <h1>강좌목록리스트</h1>
       <div>
         <input type="text" value={value} onChange={handleChange}></input>
