@@ -75,8 +75,15 @@ const ONEDU001 = () => {
       <div>
         {recentSearched && (
           <>
-            <span>{recentSearched}</span>
-            <img alt="delete" src="delete.jpeg" onClick={handleDelete} />
+            <div id="searched-keyword">
+              <span>{recentSearched}</span>
+              <img
+                id="icon-delete"
+                alt="delete"
+                src="delete.jpeg"
+                onClick={handleDelete}
+              />
+            </div>
           </>
         )}
       </div>
