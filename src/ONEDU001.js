@@ -27,7 +27,9 @@ const ONEDU001 = () => {
       }
 
       setShowList(
-        classList.filter((item) => item.name.toLowerCase().includes(value))
+        classList.filter((item) =>
+          item.name.toLowerCase().includes(value.toLowerCase())
+        )
       );
     }
     setRecentSearched(window.localStorage.getItem('recentSearched'));
