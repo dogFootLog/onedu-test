@@ -67,14 +67,14 @@ const ONEDU001 = () => {
 
   return (
     <div className="main">
-      <h1>강좌목록리스트</h1>
-      <div>
+      <div className="search-area">
+        <h1>강좌목록리스트</h1>
         <input type="text" value={value} onChange={handleChange}></input>
         <button type="button" onClick={handleSearch}>
           검색
         </button>
       </div>
-      <div>
+      <div className="contents-area">
         {recentSearched && (
           <>
             <div id="searched-keyword">
