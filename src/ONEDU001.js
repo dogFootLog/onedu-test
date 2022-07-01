@@ -89,19 +89,21 @@ const ONEDU001 = () => {
           </>
         )}
       </div>
-      <div className="container">
-        {showList &&
-          showList.length > 0 &&
-          showList.map((item, idx) => (
-            <div
-              className="item"
-              key={idx}
-              onClick={(e) => handleDetail(e, item.id)}
-            >
-              <img alt="thumbnail" src={item.imageFile} />
-              <p>{item.name}</p>
-            </div>
-          ))}
+      <div className="container-wrap">
+        <div className="container">
+          {showList &&
+            showList.length > 0 &&
+            showList.map((item, idx) => (
+              <div
+                className="item"
+                key={idx}
+                onClick={(e) => handleDetail(e, item.id)}
+              >
+                <img alt="thumbnail" src={item.imageFile} />
+                <p>{item.name}</p>
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );

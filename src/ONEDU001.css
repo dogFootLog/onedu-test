@@ -3,26 +3,27 @@ div {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+}
+
+.main {
+  text-align: center;
+}
+
+.container-wrap {
+  padding: auto;
 }
 
 .container {
   margin-top: 30px;
-  width: 100vw;
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr;
-}
-
-img {
-  width: 200px;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .search-area {
   text-align: center;
-}
-
-.contents-area {
-  margin: 0 auto;
 }
 
 #icon-delete {
@@ -37,4 +38,9 @@ img {
 
 .item {
   text-align: center;
+  padding: 20px;
+}
+
+img {
+  width: 230px;
 }
