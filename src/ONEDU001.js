@@ -89,9 +89,8 @@ const ONEDU001 = () => {
           </>
         )}
       </div>
-      t
-      <div className="container-wrap">
-        <div className="container test">
+      <div className="wrapper">
+        <section className="container">
           {showList &&
             showList.length > 0 &&
             showList.map((item, idx) => (
@@ -104,7 +103,31 @@ const ONEDU001 = () => {
                 <p>{item.name}</p>
               </div>
             ))}
-        </div>
+          {showList &&
+            showList.length > 0 &&
+            showList.map((item, idx) => (
+              <div
+                className="item"
+                key={idx}
+                onClick={(e) => handleDetail(e, item.id)}
+              >
+                <img alt="thumbnail" src={item.imageFile} />
+                <p>{item.name}</p>
+              </div>
+            ))}
+          {showList &&
+            showList.length > 0 &&
+            showList.map((item, idx) => (
+              <div
+                className="item"
+                key={idx}
+                onClick={(e) => handleDetail(e, item.id)}
+              >
+                <img alt="thumbnail" src={item.imageFile} />
+                <p>{item.name}</p>
+              </div>
+            ))}
+        </section>
       </div>
     </div>
   );
