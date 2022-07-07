@@ -1,9 +1,9 @@
-import './ONEDU003.css';
+import styles from './ONEDU003.module.css';
 
 const ONEDU003 = () => {
   return (
-    <div className="main3">
-      <div className="container3"></div>
+    <div className={styles['main']}>
+      <div className={styles['container']}></div>
     </div>
   );
 };

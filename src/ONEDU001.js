@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import fetcher from './fetcher';
-import './ONEDU001.css';
+import styles from './ONEDU001.module.css';
 
 const ONEDU001 = () => {
   const [value, setValue] = useState('');
@@ -66,15 +66,15 @@ const ONEDU001 = () => {
   };
 
   return (
-    <div className="main">
-      <div className="search-area">
+    <div className={styles['main']}>
+      <div className={styles['search-area']}>
         <h1>강좌목록리스트</h1>
         <input type="text" value={value} onChange={handleChange}></input>
         <button type="button" onClick={handleSearch}>
           검색
         </button>
       </div>
-      <div className="contents-area">
+      <div className={styles['contents-area']}>
         {recentSearched && (
           <>
             <div id="searched-keyword">
@@ -89,13 +89,13 @@ const ONEDU001 = () => {
           </>
         )}
       </div>
-      <div className="wrapper">
-        <section className="container">
+      <div className={styles['wrapper']}>
+        <section className={styles['container']}>
           {showList &&
             showList.length > 0 &&
             showList.map((item, idx) => (
               <div
-                className="item"
+                className={styles['item']}
                 key={idx}
                 onClick={(e) => handleDetail(e, item.id)}
               >
@@ -107,7 +107,7 @@ const ONEDU001 = () => {
             showList.length > 0 &&
             showList.map((item, idx) => (
               <div
-                className="item"
+                className={styles['item']}
                 key={idx}
                 onClick={(e) => handleDetail(e, item.id)}
               >
@@ -119,7 +119,7 @@ const ONEDU001 = () => {
             showList.length > 0 &&
             showList.map((item, idx) => (
               <div
-                className="item"
+                className={styles['item']}
                 key={idx}
                 onClick={(e) => handleDetail(e, item.id)}
               >
