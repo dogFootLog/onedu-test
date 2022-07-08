@@ -1,4 +1,4 @@
-import styles from './ONEDU003.module.css';
+import styles from './ONEDU003.module.scss';
 
 const ONEDU003 = () => {
   return (

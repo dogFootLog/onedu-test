@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import fetcher from './fetcher';
-import styles from './ONEDU001.module.css';
+import styles from './ONEDU001.module.scss';
 
 const ONEDU001 = () => {
   const [value, setValue] = useState('');
