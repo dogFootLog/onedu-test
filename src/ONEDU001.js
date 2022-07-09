@@ -89,46 +89,44 @@ const ONEDU001 = () => {
           </>
         )}
       </div>
-      <div className={styles['wrapper']}>
-        <section className={styles['container']}>
-          {showList &&
-            showList.length > 0 &&
-            showList.map((item, idx) => (
-              <div
-                className={styles['item']}
-                key={idx}
-                onClick={(e) => handleDetail(e, item.id)}
-              >
-                <img alt="thumbnail" src={item.imageFile} />
-                <p>{item.name}</p>
-              </div>
-            ))}
-          {showList &&
-            showList.length > 0 &&
-            showList.map((item, idx) => (
-              <div
-                className={styles['item']}
-                key={idx}
-                onClick={(e) => handleDetail(e, item.id)}
-              >
-                <img alt="thumbnail" src={item.imageFile} />
-                <p>{item.name}</p>
-              </div>
-            ))}
-          {showList &&
-            showList.length > 0 &&
-            showList.map((item, idx) => (
-              <div
-                className={styles['item']}
-                key={idx}
-                onClick={(e) => handleDetail(e, item.id)}
-              >
-                <img alt="thumbnail" src={item.imageFile} />
-                <p>{item.name}</p>
-              </div>
-            ))}
-        </section>
-      </div>
+      <section className={styles['container']}>
+        {showList &&
+          showList.length > 0 &&
+          showList.map((item, idx) => (
+            <div
+              className={styles['item']}
+              key={idx}
+              onClick={(e) => handleDetail(e, item.id)}
+            >
+              <img alt="thumbnail" src={item.imageFile} />
+              <p>{item.name}</p>
+            </div>
+          ))}
+        {showList &&
+          showList.length > 0 &&
+          showList.map((item, idx) => (
+            <div
+              className={styles['item']}
+              key={idx}
+              onClick={(e) => handleDetail(e, item.id)}
+            >
+              <img alt="thumbnail" src={item.imageFile} />
+              <p>{item.name}</p>
+            </div>
+          ))}
+        {showList &&
+          showList.length > 0 &&
+          showList.map((item, idx) => (
+            <div
+              className={styles['item']}
+              key={idx}
+              onClick={(e) => handleDetail(e, item.id)}
+            >
+              <img alt="thumbnail" src={item.imageFile} />
+              <p>{item.name}</p>
+            </div>
+          ))}
+      </section>
     </div>
   );
 };
